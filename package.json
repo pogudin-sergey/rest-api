@@ -1,0 +1,15 @@
+{
+  "name": "auto",
+  "version": "1.0.0",
+  "description": "Test task",
+  "main": "index.js",
+  "config": {
+    "services": "postgres mongo server"
+  },
+  "scripts": {
+    "local": "docker compose up --build $npm_package_config_services",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pogudin Sergey",
+  "license": "ISC"
+}

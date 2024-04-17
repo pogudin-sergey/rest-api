@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Process",
+      "type": "node",
+      "request": "attach",
+      "address": "localhost",
+      "port": 9080,
+      "localRoot": "${workspaceFolder}/server",
+      "remoteRoot": "/var/www/server",
+      "restart": true,
+      "sourceMaps": true
+    },
+  ]
+}
