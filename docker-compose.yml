@@ -15,10 +15,7 @@ services:
     build:
       context: ./postgres
     command: postgres -c 'max_connections=300'
-    environment:
-      POSTGRES_DB: optimacros
-      POSTGRES_USER: user1
-      POSTGRES_PASSWORD: pass1
+    env_file: ./development.env
     volumes:
       - ./.cache/db:/var/lib/postgresql/data
     ports:
