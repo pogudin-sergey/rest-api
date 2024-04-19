@@ -30,8 +30,8 @@ npm test
 | Method | Endpoint      | Post params                     | Description                          |
 |--------|---------------|---------------------------------|--------------------------------------|
 | POST   | /api/auth     | username<br>password            | Logs in and returns the Bearer token |
-| POST   | /api/auto     | brand<br>model<br>year<br>price | Adds a car by ID                     |
+| POST   | /api/auto     | brand<br>model<br>year<br>price | Adds a car                           |
 | DELETE | /api/auto/:id |                                 | Deletes a car by ID                  |
 | PUT    | /api/auto/:id | brand<br>model<br>year<br>price | Updates the car by ID                |
-| GET    | /api/auto/:id |                                 | Get an auto by ID                    |
-| GET    | /api/auto     |                                 | Returns a sorted list of cars        |
+| GET    | /api/auto/:id |                                 | Returns an auto by ID                |
+| GET    | /api/auto     |                                 | Returns an sorted list of cars       |

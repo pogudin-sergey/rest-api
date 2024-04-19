@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "port": {
+      "type": "number"
+    },
+    "mongodb_uri": {
+      "type": "string"
+    }
+  },
+  "required": ["port", "mongodb_uri"],
+  "additionalProperties": false
+}
