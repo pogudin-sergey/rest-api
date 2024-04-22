@@ -4,6 +4,13 @@
 Create a `.env` file in the root of the project with the following content:
 ```env
 PORT=8080
+POSTGRES_DB=auto
+POSTGRES_USER=user1
+POSTGRES_PASSWORD=pass1
+MONGODB_URI=mongodb://mongo:27017/auto
+MONGODB_DBNAME=optimacros
+MONGODB_COLLECTION=auto
+LOG_LEVEL='debug'
 ```
 
 ## Install
@@ -11,19 +18,16 @@ PORT=8080
 npm ci
 ```
 
-## Run product
+## Run development
 ```bash
 npm start
 ```
 
-## Run development
-```bash
-npm run dev
-```
-
 ## Run tests
+Databases must be started first. Redad the [README.md](../README.md) file for more information.
+
 ```bash
-npm test
+npm run test
 ```
 
 ## Rest api

@@ -20,7 +20,19 @@ LOG_LEVEL='debug'
 
 ## Start local (development mode)
 ```bash
-npm run local
+npm start
+```
+
+## Start tests
+Run databases only
+```bash
+npm run db
+```
+
+Run server tests
+```bash
+cd server
+npm run test
 ```
 
 ## Client documentation

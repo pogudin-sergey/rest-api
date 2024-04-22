@@ -4,11 +4,13 @@
   "description": "Test task",
   "main": "index.js",
   "config": {
-    "services": "postgres mongo server"
+    "db": "postgres mongo",
+    "dev": "postgres mongo server"
   },
   "scripts": {
-    "local": "docker compose up --build $npm_package_config_services",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "docker compose up --build $npm_package_config_dev",
+    "db": "docker compose up --build $npm_package_config_db",
+    "test": "echo \"Start: npm run db & run test locally\" && exit 1"
   },
   "author": "Pogudin Sergey",
   "license": "ISC"
