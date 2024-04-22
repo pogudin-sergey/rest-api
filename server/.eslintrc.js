@@ -55,6 +55,7 @@ module.exports = {
     "@typescript-eslint/no-shadow": "error",
     "import/prefer-default-export": "off",
     "no-useless-constructor": "off",
+    "lines-between-class-members": "off",
     "@typescript-eslint/no-useless-constructor": [
       "error"
     ],

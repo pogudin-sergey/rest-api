@@ -13,11 +13,11 @@ const scheme: Scheme = {
   create: ajv.compile(schemaCreate),
 };
 
-function isValid(scheme: ValidateFunction, req: Request, res: Response): boolean {
-  if (!scheme(req.body)) {
-    logger.error(scheme.errors);
+function isValid(validFunc: ValidateFunction, req: Request, res: Response): boolean {
+  if (!validFunc(req.body)) {
+    logger.error(validFunc.errors);
     res.status(400).json({
-      errors: scheme.errors,
+      errors: validFunc.errors,
     });
 
     return false;
