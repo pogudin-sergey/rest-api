@@ -1,9 +1,9 @@
-import dotenv from "dotenv"
-import Ajv from "ajv"
-import schema from './schema.json'
-import logger from "../utils/logger"
+import dotenv from 'dotenv';
+import Ajv from 'ajv';
+import log, { LogLevelDesc } from 'loglevel';
+import schema from './schema.json';
 
-dotenv.config()
+dotenv.config();
 
 interface Config {
   port: number
@@ -16,11 +16,12 @@ const config: Config = {
 };
 
 // Schema verify
-const ajv = new Ajv()
-const validate = ajv.compile(schema)
+const ajv = new Ajv();
+const validate = ajv.compile(schema);
 if (!validate(config)) {
-  logger.error(validate.errors)
-  throw new Error("Config validation failed")
+  // eslint-disable-next-line no-console
+  console.error(validate.errors);
+  throw new Error('Config validation failed');
 }
 
-export default config
+export default config;

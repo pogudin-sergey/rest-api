@@ -1,11 +1,10 @@
-import express, { Application } from "express";
-import welcomeRoutes from "./welcome.routes";
-import apiRoutes from "./api.routes";
+import express, { Application } from 'express';
+import welcomeRoutes from './welcome.routes';
+import autoRoutes from './api.routes';
 
-export default class Routes {
-  constructor(app: Application) {
-    app.use("/", welcomeRoutes);
-    app.use("/api", apiRoutes);
-    app.use('/doc', express.static('doc'));
-  }
+export default function routes(app: Application) {
+  app.use('/', welcomeRoutes);
+  // app.use("/api/auth", autoRoutes);
+  app.use('/api/auto', autoRoutes);
+  app.use('/doc', express.static('doc'));
 }

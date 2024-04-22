@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 class WelcomeRoutes {
   router = Router();
@@ -8,8 +8,8 @@ class WelcomeRoutes {
   }
 
   intializeRoutes() {
-    this.router.get("/", (req, res) => {
-        res.redirect("/doc");
+    this.router.get('/', (req, res) => {
+      res.redirect('/doc');
     });
   }
 }
