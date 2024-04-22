@@ -13,7 +13,7 @@ const scheme: Scheme = {
   create: ajv.compile(schemaCreate),
 };
 
-export function isValid(scheme: ValidateFunction, req: Request, res: Response): boolean {
+function isValid(scheme: ValidateFunction, req: Request, res: Response): boolean {
   if (!scheme(req.body)) {
     logger.error(scheme.errors);
     res.status(400).json({

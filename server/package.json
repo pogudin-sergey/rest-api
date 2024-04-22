@@ -9,7 +9,8 @@
     "dev": "npm-run-all --parallel build:watch run:watch",
     "start": "tsc && node ./dist/src/server.js",
     "lint": "npx eslint --ignore-path .gitignore --ext .ts ./src",
-    "test": "export $(cat test/.env | xargs) && npx jest --collectCoverage=true --detectOpenHandles --forceExit"
+    "test:unit": "export $(cat test/.env | xargs) && npx jest --collectCoverage=false",
+    "test": "export $(cat test/.env | xargs) && npx jest --collectCoverage=true"
   },
   "author": "Pogudin Sergey",
   "license": "ISC",
@@ -46,6 +47,8 @@
     "testPathIgnorePatterns": [
       "dist"
     ],
+    "forceExit": true,
+    "detectOpenHandles": true,
     "collectCoverage": false,
     "collectCoverageFrom": [
       "**/*.(t|j)s"

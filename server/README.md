@@ -1,16 +1,22 @@
 # Server
 
 ## Configuration
-Create a `.env` file in the root of the project with the following content:
+Create a `.env` file in the root directory of the project with the following content:
 ```env
 PORT=8080
-POSTGRES_DB=auto
-POSTGRES_USER=user1
-POSTGRES_PASSWORD=pass1
 MONGODB_URI=mongodb://mongo:27017/auto
 MONGODB_DBNAME=optimacros
 MONGODB_COLLECTION=auto
 LOG_LEVEL='debug'
+```
+
+Create a `.env` file in the root/test directory of the project with the following content:
+```env
+PORT=8080
+MONGODB_URI=mongodb://localhost:27017/test
+MONGODB_DBNAME=test
+MONGODB_COLLECTION=auto
+LOG_LEVEL='error'
 ```
 
 ## Install
@@ -26,6 +32,12 @@ npm start
 ## Run tests
 Databases must be started first. Redad the [README.md](../README.md) file for more information.
 
+### Unit tests only
+```bash
+npm run test:unit
+```
+
+### Test with coverage
 ```bash
 npm run test
 ```
