@@ -4,10 +4,26 @@
     "port": {
       "type": "number"
     },
-    "mongodb_uri": {
+    "mongodbUri": {
       "type": "string"
+    },
+    "mongodbDb": {
+      "type": "string"
+    },
+    "mongodbCollection": {
+      "type": "string"
+    },
+    "logLevel": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   },
-  "required": ["port", "mongodb_uri"],
+  "required": ["port", "mongodbUri", "mongodbDb", "mongodbCollection", "logLevel"],
   "additionalProperties": false
 }

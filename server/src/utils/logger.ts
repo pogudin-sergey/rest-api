@@ -1,5 +1,6 @@
 import log from 'loglevel';
+import config from '../config';
 
-log.setDefaultLevel(log.levels.DEBUG);
+log.setDefaultLevel(config.logLevel);
 
 export default log;
