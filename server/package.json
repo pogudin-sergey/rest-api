@@ -7,7 +7,7 @@
     "build:watch": "tsc --watch",
     "run:watch": "nodemon --inspect=0.0.0.0:9080 --watch dist ./dist/src/server.js",
     "dev": "npm-run-all --parallel build:watch run:watch",
-    "start": "tsc && node ./dist/src/server.js",
+    "start": "node ./dist/src/server.js",
     "lint": "npx eslint --ignore-path .gitignore --ext .ts ./src",
     "test:unit": "export $(cat test/.env | xargs) && npx jest --collectCoverage=false",
     "test": "export $(cat test/.env | xargs) && npx jest --collectCoverage=true"
